@@ -1,13 +1,172 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            margin: 0; /*so header doesnt have that dumb gap*/
+        }
+
+        nav {
+            background-color: #121212;
+            display: flex;
+            justify-content: left;
+            gap: 2rem;
+            font-family: 'Times New Roman';
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none; /*removes the underline*/
+            font-size: 1.2rem;
+        }
+
+        /*make a seperate container so the bar can strech across screen but have text be centered; couldn't figure out making it align with my name*/
+        .nav-container {
+            max-width: 1000px;           
+            margin: 0 auto;              
+            padding: 1rem 2rem;          
+            display: flex;
+            gap: 2rem;
+            font-family: 'Times New Roman';
+        }
+
+
+        header {
+            font-family: Arial;
+            text-align: left;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem 1rem 2rem;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #b3b3b3; /*darker colour descriptions look better imo*/
+            line-height: 1.6; /*add spacing between text*/
+        }
+
+        .projects-container {
+            font-family: 'Times New Roman';
+            text-align: left;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem 1rem 2rem;
+        }
+
+        /*found online, this is the line; REMEMBER TO ADD SOURCE*/
+        .projects-container h2 {
+            font-size: 2.5rem;
+            border-bottom: 2px solid #b3b3b3;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /*this is what makes the grid 2x2*/
+            gap: 2rem;
+        }
+
+        /*the boxes*/
+        .project-card {
+            background-color: #121212;
+            text-decoration: none;
+            display: block;
+            overflow: hidden;
+        }
+
+        /*image part*/
+        .project-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        /*this adds a little bit of a boarder around it*/
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        /*title of box*/
+        .project-card h3 {
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        /*box description*/
+        .project-card p {
+            font-size: 1.05rem;
+            color: #b3b3b3;
+            line-height: 1.4;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+      <div class="nav-container">
+        <a href="">Home</a>
+        <a href="">Projects</a>
+        <a href="">Contact</a>
+      </div>
+    </nav>
+
+    <header id="home">
+        <h1>James Rousseau</h1>
+        <p>Hello I'm James, a software engineer at the university of Ottawa! I am currently taking a UI analysis and design course at the University of Ottawa to broaden my horizons and get better at UI.</p>
+    </header>
+
+    <main class="projects-container" id="projects">
+        <h2>Featured Projects:</h2>
+        <div class="grid">
+            
+            <a href="servicesite.html" target="_blank" class="project-card">
+                <img src="/images/dentist_image.png" alt="Service Site Image" class="project-image">
+                <div class="project-content">
+                    <h3>Service Site</h3>
+                    <p>Assignment 2 TBA</p>
+                </div>
+            </a>
+
+            <a href="memorygame.html" target="_blank" class="project-card">
+                <img src="/images/memorygame_image.png" alt="Memory Game Image" class="project-image">
+                <div class="project-content">
+                    <h3>Memory Game</h3>
+                    <p>Assignment 3 TBA</p>
+                </div>
+            </a>
+
+            <a href="ecommercesite.html" target="_blank" class="project-card">
+                <img src="/images/econsite_image.png" alt="E-Commerce Site Image" class="project-image">
+                <div class="project-content">
+                    <h3>E-Commerce Site</h3>
+                    <p>Assignment 4 TBA</p>
+                </div>
+            </a>
+
+            <a href="analyticalsite.html" target="_blank" class="project-card">
+                <img src="/images/analyticalsite_image.png" alt="Analytical Site Image" class="project-image">
+                <div class="project-content">
+                    <h3>Analytical Site</h3>
+                    <p>Assignment 5 TBA</p>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+</body>
 </html>
