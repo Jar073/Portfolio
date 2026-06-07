@@ -23,7 +23,7 @@ function App() {
       <main className="projects-container" id="projects">
         <h2>Featured Projects:</h2>
         <div className="grid">
-          <a href="servicesite.html" target="_blank" rel="noreferrer" className="project-card">
+          <a href="https://jrousportfolio.netlify.app/" target="_blank" rel="noreferrer" className="project-card">
             <img src="/images/dentist_image.png" alt="Service Site Image" className="project-image"/>
             <div className="project-content">
               <h3>Service Site</h3>
